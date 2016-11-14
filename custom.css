@@ -1,0 +1,66 @@
+body{
+background: url(body.png) #f4f4f4;
+font-family: 'Merriweather', serif;
+color: #666;
+font-size: 18px;
+line-height: 1.62857;
+}
+
+h1, h2, h3{
+font-family: 'Oswald', sans-serif;
+color: #fff;
+}
+h2, h3{
+margin-top: 40px;
+margin-bottom: 20px;
+}
+h1{
+font-weight: 300;
+margin-top:0;
+margin:0.3em 0 0.5em;
+text-transform: uppercase;
+color: #000;
+
+a{
+color: #000;
+}
+a:hover, a:focus {
+color: #bed600;
+text-decoration:none;
+}
+p {
+margin: 0 0 20px;
+}
+p a, #content li a{
+border-bottom: 1px dotted #000;
+line-height: 1;
+}
+p a:hover, #content li a:hover{
+color: #bed600;
+border-bottom: 1px dotted #bed600;
+text-decoration: none;
+}
+#portal-logo{
+padding: 1.2em 0 0.5em;
+float: left;
+position: relative;
+z-index: 99999;
+}
+header{
+max-width: 1170px;
+margin: 0 auto;
+}
+#map img{
+width: 100%;
+height: auto;
+}
+/*
+#portal-logo {
+float: left;
+padding: 10px 0;
+}
+#portal-logo img {
+max-width: 180px;
+height: auto;
+}
+*/
