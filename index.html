@@ -3,18 +3,55 @@
     <meta charset="utf-8" >
       <link rel="stylesheet" href="reveal.js/css/reveal.css">
       <link rel="stylesheet" href="reveal.js/css/theme/white.css">
-      <link rel="stylesheet" href="custom.css">
+
       <!--[if lt IE 9]>
       <script src="lib/js/html5shiv.js"></script>
-      <![endif]-->  
+      <![endif]-->
+      <script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+      </script>
+      <style>
+        #portal-header {
+            background-color: #bed600;
+        }
+        #portal-logo{
+            padding: 1.2em 0 0.5em;
+            float: left;
+            position: relative;
+            z-index: 99999; 
+            padding: 10px 0;
+        }
+
+        #portal-logo img {
+                max-width: 180px;
+                height: auto;
+                padding: 10px 10px;
+        }
+
+        .reveal strong,
+        .reveal b {
+                font-weight: bold;
+                color: #bed600;
+        }
+        .attribution{
+                position:absolute;
+                bottom:0;
+                left:0;
+                font-size: x-small;
+        }
+      </style>
     </head>
-    <body>      
-      <div id="portal-header-wrapper">
-        <div id="portal-header">
-          <a id="portal-logo" class="brand" title="CodeSyntax - Interneten adituak" accesskey="1" href="https://www.codesyntax.com/eu">
-            <img src="img/logo.png" alt="CodeSyntax" title="CodeSyntax" width="274" height="61"></a>
-          </div>
-        </div>
+    <body>
+      
+      <div id="portal-header">
+        <a id="portal-logo" class="brand" title="CodeSyntax - Interneten adituak" accesskey="1" href="https://www.codesyntax.com/eu">
+          <img src="img/logo.png" alt="CodeSyntax" title="CodeSyntax" width="274" height="61"/></a>
+      </div>
+       
   
         <div class="reveal">
           <div class="slides">
@@ -69,7 +106,7 @@
                   <small>By Quinn Dombrowski from Berkeley, USA (Pulse oximeter) [CC BY-SA 2.0 (http://creativecommons.org/licenses/by-sa/2.0)], via Wikimedia Commons</small>
                 </p>
               </section>
-              <section id="nystagmeter">
+              <section id="nystagmeter-intro">
                 <h2>Caso práctico: Nystagmeter</h2>
                 <img height="70%" data-src="img/LogoNystagmeter.jpg" />
               </section>
@@ -78,6 +115,10 @@
                 <blockquote cite="https://es.wikipedia.org/wiki/Nistagmo">
                   El nistagmo es un movimiento involuntario e incontrolable de los ojos. El movimiento puede ser horizontal, vertical, rotatorio, oblicuo o una combinación de estos. El nistagmo está asociado a un mal funcionamiento en las áreas cerebrales que se encargan de controlar el movimiento, pero no se comprende muy bien la naturaleza exacta de estas anomalías.
                 </blockquote>
+                <aside class="notes">
+                  El nistagmo esta asociado a problemas neurologicos
+                  La evolución es lo que importa.
+                </aside>
               </section>
               <section id="nistagmus-video">
                 <h2>Nistagmo</h2>
@@ -86,7 +127,100 @@
                 <small>De Student BSMU de en.wikipedia.org, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=3004633</small>
                 </p>
               </section>
+              <section id="nystagmeter-objectives">
+                <h2>Objetivos</h2>
+                <ul>
+                  <li>Prueba en primera instancía
+                  <ul>
+                    <li>Costos</li>
+                    <li>Mantener caracteristicas</li>
+                  </ul>
+                  </li>
+                  <li>Dispositivo portátil</li>
+                </ul>
+                <aside class="notes">
+                  Equipamiento actual es muy costos (~20K)
+                </aside>
+              </section>
+              <section id="design">
+                <h2>Analisis / Diseño </h2>
+                <section>
+                <h3>Captación de video</h3>
+                <ul>
+                  <li>Cámara USB</li>
+                  <li>Teléfono móvil</li>
+                  <li>Videocamaras</li>
+                  <li>Webcam</li>
+                </ul>
+                </section>
+                <section>
+                <h3>Procesado de la imagen</h3>
+                <ul>
+                  <li>Ordenador portátil</li>
+                  <li>Single board computer</li>
+                  <li>Móvil/Tablet</li>
+                </ul>
+                </section>
+                <section>
+                <h3>Presentación de resultados</h3>
+                <ul>
+                  <li>Monitor externo</li>
+                  <li>Movil/Tablet</li>
+                  <li>Pantalla add hoc</li>
+                </ul>
+                </section>
+              </section>
+              <section id="initial-design">
+                <img data-src="img/initial_design.png" />
+              </section>
+              <section id="hw-selection">
+                <section>
+                <h2>Con el diseño inicial</h2>
+                <ul>
+                  <li>Unidad de computo: <p class="fragment highlight-green">Raspberry Pi 3</p></li>
+                  <li>Captación de video: <p class="fragment highlight-green">Raspberry Pi camera module</p></li>
+                  <li>Visualizacion: <p class="fragment highlight-green">Pantalla genérica 4"</p></li>
+                </ul>
+                </section>
+                <section>
+                  <h2>Segunda iteración de diseño</h2>
+                  <ul>
+                    <li>Unidad de computo: <p class="fragment highlight-green">Raspberry Pi 3</p></li>
+                    <li>Captación de video: <p class="fragment highlight-green">Cámara USB</p></li>
+                    <li>Visualización: <p class="fragment highlight-green">Raspberry Foundation PiTFT</p></li>
+                    <li>*Soporte: <p class="fragment highlight-green">Caja custom impresa 3D</p></li>
+                  </ul>
+                </section>
+                <aside class="notes">
+                  Todos son componentes basados en hardware libre, podriamos modificar los diseños y adaptarlos para llevarlos a produccion.
+                </aside>
+              </section>
+              <section>
+                <section>
+                  <img width="75%" data-src="img/nystagmeter_components.jpg" />                 
+                </section>
+                <section data-transition="fade-in">
+                  <img width="75%" data-src="img/nystagmeter_connections.jpg" />
+                </section>
+                <section>
+                    <img data-src="img/nystagmeter_case.jpg"  />
+                </section>
+                <section>
+                  <img data-src="img/build_case.jpg"/>
+                </section>
+              </section>
+              <section data-transition="slide">
+                <section>
+                  <h2>Stack software</h2>
+                </section>
+                <section>
+                  <img height="90%" data-src="img/software_stack.png" />
+                </section>
+              </section>
           </div>
+        </div>
+        <div id="portal-footer">
+          <p>Librecon 2016 - Nystagmeter, un ejemplo práctico</p>
         </div>
         <script src="reveal.js/lib/js/head.min.js"></script>
         <script src="reveal.js/js/reveal.js"></script>
