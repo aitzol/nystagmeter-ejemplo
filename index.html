@@ -31,17 +31,21 @@
                 height: auto;
                 padding: 10px 10px;
         }
-
+        #portal-footer {
+                position: absolute;
+                bottom: 0%;
+                left: 40%;
+        }
         .reveal strong,
         .reveal b {
                 font-weight: bold;
                 color: #bed600;
         }
-        .attribution{
+        .reveal .attribution{
                 position:absolute;
-                bottom:0;
+                bottom:0px;
                 left:0;
-                font-size: x-small;
+                font-size: 0.4em;
         }
       </style>
     </head>
@@ -80,7 +84,7 @@
                 <h2>Componentes cerrados</h2>
                 <p>
                 <img height="70%"data-src="img/Pulse_oximetry.jpg" />
-                <small>De KENPEI - KENPEI's photo, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=318025</small>
+                <span class="attribution">De KENPEI - KENPEI's photo, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=318025</span>
                 </p>
               </section>
               <section>
@@ -95,16 +99,16 @@
                 <h2>Y si...</h2>
                 <h2 class="fragment">¿Hubiera pruebas clinicas realizables con elementos de uso comun?</h2>
                 <ul>
-                  <li class="fragment fade-left">Camaras + analisis de imagen</li>
-                  <li class="fragment fade-left">Emisores + receptores de luz</li>
-                  <li class="fragment fade-left">Emisión de impulso (zumbador) + respuesta de usuario</li>
+                  <li class="fragment fade-left"><strong>Camaras + analisis de imagen</strong></li>
+                  <li class="fragment fade-left"><strong>Emisores + receptores de luz</strong></li>
+                  <li class="fragment fade-left"><strong>Emisión de impulso (zumbador) + respuesta de usuario</strong></li>
                 </ul>
               </section>
-              <section>
-                <p>
-                  <img data-src="img/pulseoximetersensor.jpg" />
-                  <small>By Quinn Dombrowski from Berkeley, USA (Pulse oximeter) [CC BY-SA 2.0 (http://creativecommons.org/licenses/by-sa/2.0)], via Wikimedia Commons</small>
-                </p>
+              <section> 
+                  
+                <img class="stretch" data-src="img/pulseoximetersensor.jpg" />
+                <span class="attribution">By Quinn Dombrowski from Berkeley, USA (Pulse oximeter) [CC BY-SA 2.0 (http://creativecommons.org/licenses/by-sa/2.0)], via Wikimedia Commons</span>
+               
               </section>
               <section id="nystagmeter-intro">
                 <h2>Caso práctico: Nystagmeter</h2>
@@ -220,8 +224,9 @@
           </div>
         </div>
         <div id="portal-footer">
-          <p>Librecon 2016 - Nystagmeter, un ejemplo práctico</p>
+            <p>Librecon 2016 - Nystagmeter, un ejemplo práctico</p>
         </div>
+       
         <script src="reveal.js/lib/js/head.min.js"></script>
         <script src="reveal.js/js/reveal.js"></script>
         <script>
