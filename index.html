@@ -1,4 +1,4 @@
-<html> 
+<html>
   <head>
     <meta charset="utf-8" >
       <link rel="stylesheet" href="reveal.js/css/reveal.css">
@@ -23,7 +23,7 @@
             padding: 1.2em 0 0.5em;
             float: left;
             position: relative;
-            z-index: 99999; 
+            z-index: 99999;
             padding: 10px 0;
         }
 
@@ -51,21 +51,21 @@
       </style>
     </head>
     <body>
-      
+
       <div id="portal-header">
         <a id="portal-logo" class="brand" title="CodeSyntax - Interneten adituak" accesskey="1" href="https://www.codesyntax.com/eu">
           <img src="img/logonegatiboa.png" alt="CodeSyntax" title="CodeSyntax" width="274" height="61"/></a>
       </div>
-       
-  
+
+
         <div class="reveal">
           <div class="slides">
             <section id="frontpage">
-              <h2>Software libre en la industria de equipamiento médico y tecnología sanitaria.</h2>             
-            </section>                                                        
+              <h2>Software libre en la industria de equipamiento médico y tecnología sanitaria.</h2>
+            </section>
             <section id="real-frontpage">
               <strong>Nystagmeter</strong>, un ejemplo práctico
-            </section>  
+            </section>
             <section id="medical-industry">
               <h2>Industria médica</h2>
               <ul>
@@ -105,11 +105,11 @@
                   <li class="fragment fade-left"><strong>Emisión de impulso (zumbador) + respuesta de usuario</strong></li>
                 </ul>
               </section>
-              <section> 
-                  
+              <section>
+
                 <img class="stretch" data-src="img/pulseoximetersensor.jpg" />
                 <span class="attribution">By Quinn Dombrowski from Berkeley, USA (Pulse oximeter) [CC BY-SA 2.0 (http://creativecommons.org/licenses/by-sa/2.0)], via Wikimedia Commons</span>
-               
+
               </section>
               <section id="nystagmeter-intro">
                 <h2>Caso práctico: Nystagmeter</h2>
@@ -182,18 +182,18 @@
                 <section>
                 <h2>Con el diseño inicial</h2>
                 <ul>
-                  <li>Unidad de computo: <p class="fragment highlight-green">Raspberry Pi 3</p></li>
-                  <li>Captación de video: <p class="fragment highlight-green">Raspberry Pi camera module</p></li>
-                  <li>Visualizacion: <p class="fragment highlight-green">Pantalla genérica 4"</p></li>
+                  <li>Unidad de computo: <strong class="fragment fade-left">Raspberry Pi 3</strong></li>
+                  <li>Captación de video: <strong class="fragment fade-left">Raspberry Pi camera module</strong></li>
+                  <li>Visualizacion: <strong class="fragment fade-left">Pantalla genérica 4"</strong></li>
                 </ul>
                 </section>
                 <section>
                   <h2>Segunda iteración de diseño</h2>
                   <ul>
-                    <li>Unidad de computo: <p class="fragment highlight-green">Raspberry Pi 3</p></li>
-                    <li>Captación de video: <p class="fragment highlight-green">Cámara USB</p></li>
-                    <li>Visualización: <p class="fragment highlight-green">Raspberry Foundation PiTFT</p></li>
-                    <li>*Soporte: <p class="fragment highlight-green">Caja custom impresa 3D</p></li>
+                    <li>Unidad de computo: <strong class="fragment fade-left">Raspberry Pi 3</strong></li>
+                    <li>Captación de video: <strong class="fragment fade-left">Cámara USB</strong></li>
+                    <li>Visualización: <strong class="fragment fade-left">Raspberry Foundation PiTFT</strong></li>
+                    <li>*Soporte: <strong class="fragment fade-left">Caja custom impresa 3D</strong></li>
                   </ul>
                 </section>
                 <aside class="notes">
@@ -202,7 +202,7 @@
               </section>
               <section>
                 <section>
-                  <img width="75%" data-src="img/nystagmeter_components.jpg" />                 
+                  <img width="75%" data-src="img/nystagmeter_components.jpg" />
                 </section>
                 <section data-transition="fade-in">
                   <img width="75%" data-src="img/nystagmeter_connections.jpg" />
@@ -222,12 +222,37 @@
                   <img height="90%" data-src="img/software_stack.png" />
                 </section>
               </section>
+              <section>
+                  <h2>Estado actual</h2>
+                  <ul>
+                      <li>Prototipo funcional</li>
+                      <li>Presentado al doctor</li>
+                      <li>Iniciando los trámites para las pruebas clínicas</li>
+                      <li>Tercera iteración de diseño</li>
+                  </ul>
+              </section>
+              <section>
+                  <h2>Conclusiones</h2>
+                  <ul>
+                      <li>Componentes abiertos permiten gran agilidad en estados iniciales</li>
+                      <li>Son posibles iteraciones de diseño sin incrementar (mucho) el costo</li>
+                      <li>Arquitecturas actuales permiten utilizar stacks de software complejos en entornos embebidos</li>
+                  </ul>
+              </section>
+              <section>
+                <h2>¡Gracias!</h2>
+                <h2>¿Preguntas?</h2>
+                <p>anaberan@codesyntax.com</p>
+                <p>https://twitter.com/aitzol</p>
+                <p>https://github.com/aitzol</p>
+                <p>https://aitzol.github.io/nystagmeter-ejemplo</p>
+              </section>
           </div>
         </div>
         <div id="portal-footer">
             <p>Librecon 2016 - Nystagmeter, un ejemplo práctico</p>
         </div>
-       
+
         <script src="reveal.js/lib/js/head.min.js"></script>
         <script src="reveal.js/js/reveal.js"></script>
         <script>
