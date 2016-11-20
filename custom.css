@@ -45,6 +45,7 @@ padding: 1.2em 0 0.5em;
 float: left;
 position: relative;
 z-index: 99999;
+padding: 10px 0;
 }
 header{
 max-width: 1170px;
@@ -59,8 +60,13 @@ height: auto;
 float: left;
 padding: 10px 0;
 }
+*/
 #portal-logo img {
 max-width: 180px;
 height: auto;
+padding: 10px 0;
 }
-*/
+
+.osagaia {
+    color: #0f0;
+}
